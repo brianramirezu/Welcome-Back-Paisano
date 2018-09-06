@@ -7,6 +7,7 @@ import News from './components/News';
 import Resources from './components/Resources';
 import LearnMore from './components/LearnMore';
 import Navbar from './components/CustomNavbar';
+// import Hey from './components/Hey.jsx';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
       <Router>
         <div>
           <Navbar />
+          {/* <Route exact path="/" component={Hey} /> */}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/news" component={News} />

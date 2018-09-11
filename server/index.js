@@ -24,7 +24,6 @@ app.get('/resources', function(req, res) {
       res.sendStatus(500);
     } else {
       res.json(data);
-      console.log(data);
     }
   });
 });

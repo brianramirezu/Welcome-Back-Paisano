@@ -9,12 +9,12 @@ export default class News extends Component {
         {
           'body { background-color: lightblue; }'
         }</style>
-      <Image src="assets/rights.jpg" className="header-image"/>
+      <Image src="assets/rights-banner.jpg" className="header-image"/>
       <Grid>
         <h2>Get to know your rights upon contact with the police</h2>
         <Row>
           <Col xs={12} sm={12} className="main-section">
-            <p><h4>Article 10</h4>
+            <p className="rightsText"><h4>Article 10</h4>
               <br/>
 Habitants of the Republic may, for their protection, own guns and arms in their homes.
 Only arms approved by the Army may be owned, and federal law will state the manner in which they can be used
@@ -22,31 +22,34 @@ Only arms approved by the Army may be owned, and federal law will state the mann
   the commission of such act is a felony, punishable by prison term
 </p>
             <br/>
-            <p>
+            <p className="rightsText">
               <h4>Article 14</h4>
             <br/>
-Prohibits the enactment of <a href="https://en.wikipedia.org/wiki/Ex_post_facto_law" target="_blank">ex post facto</a> (retroactive) laws. All persons punished under the law are entitled to
-  <a href="https://en.wikipedia.org/wiki/Due_process" target="_blank">due process</a>,
-punishments must follow what is dictated by written law. Note that due process under Mexican law is not the same as US law as Mexico is not a
-<a>common law</a> country.
+Prohibits the enactment of <a href="https://en.wikipedia.org/wiki/Ex_post_facto_law" target="_blank">ex post facto</a> (retroactive) laws. All persons punished under the law are entitled
+to <a href="https://en.wikipedia.org/wiki/Due_process" target="_blank">due process</a>,
+punishments must follow what is dictated by written law. Note that due process under Mexican law is not the same as US law as Mexico is not
+a <a href="https://en.wikipedia.org/wiki/Common_law" target="_blank">common law</a> country.
 </p>
-            <p>
+            <p className="rightsText">
               <h4>Article 16</h4>
               <br/>
-"In cases of <a>flagrante delicto</a>, any person may arrest the offender and his accomplices, turning them over without delay to the nearest authorities." In other words,
- a <a>citizen's arrest</a>is allowed.
+"In cases of <a href="https://en.wikipedia.org/wiki/In_flagrante_delicto" target="_blank">flagrante delicto</a>, any person may arrest the offender and his accomplices,
+turning them over without delay to the nearest authorities." In other words,
+ a <a href="https://en.wikipedia.org/wiki/Citizen%27s_arrest" target="_blank">citizen's arrest</a> is allowed.
 </p>
-            <p>
+            <p className="rightsText">
               <h4>Article 19</h4>
               <br/>
-Prohibits detention in excess of 72 hours (3 days) without formal charges. Mandates due process for imprisonable charges. Separate crimes discovered during an investigation must be charged separately. Mistreatment during detention by authorities, all discomforts that are inflicted without legal motive, and all fees or contributions (forced bribes) in jails are abuses that will be prohibited by law and curbed by the authorities.
+Prohibits detention in excess of 72 hours (3 days) without formal charges. Mandates <a href="https://en.wikipedia.org/wiki/Due_process" target="_blank">due process</a> for imprisonable charges.
+Separate crimes discovered during an investigation must be charged separately. Mistreatment during detention by authorities,
+all discomforts that are inflicted without legal motive, and all fees or contributions (forced bribes) in jails are abuses that will be prohibited by law and curbed by the authorities.
 </p>
-            <p>
+            <p className="rightsText">
               <h4>Article 20</h4>
               <br/>
 Allows people charged to remain silent.
 </p>
-            <p>
+            <p className="rightsText">
               <h4>Article 22</h4>
               <br/>
 Cruel and unusual punishment is prohibited. Specifically, penalties of death, mutilation, infamy, marks, physical punishments, torments, excessive fines, confiscation of assets, and others are abolished.

@@ -19,7 +19,7 @@ var displayResources = function(callback, logo, name, description, url) {
     if (err) {
       callback(err, null);
     } else {
-      console.log(results);
+    
       callback(null, results)
     }
   });
@@ -32,7 +32,7 @@ var displayTeamMembers = function(callback, photo, name, about) {
     if (err) {
       callback(err, null);
     } else {
-      console.log(results);
+
       callback(null, results);
     }
   });

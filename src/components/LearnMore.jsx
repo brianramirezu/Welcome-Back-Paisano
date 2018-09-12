@@ -1,57 +1,216 @@
-import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
-import {
-  Jumbotron,
-  Grid,
-  Row,
-  Col,
-  Image,
-  Button,
-  Panel
-} from 'react-bootstrap';
-import './LearnMore.css';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import ChatBot from 'react-simple-chatbot';
+import './LearnMore.css'
 
-export default class LearnMore extends Component {
+class Review extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      gender: '',
+      lived: '',
+      age: ''
+    };
+  }
+
+  componentWillMount() {
+    const {steps} = this.props;
+    const {name, gender, live, currlocation, age} = steps;
+
+    this.setState({name, gender, live, currlocation, age});
+  }
+
   render() {
-    return (<div>
-      <style>
-        {
-          'body { background-color: green; }'
-        }</style>
-      <Panel bsStyle="primary">
-        <Panel.Heading>
-          <Panel.Title componentClass="h3">EXTRA 1</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>ADD TXT here for in the info of the extra 1</Panel.Body>
-      </Panel>
-
-      <Panel bsStyle="success">
-        <Panel.Heading>
-          <Panel.Title componentClass="h3">EXTRA 2</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>ADD TXT here for in the info of the extra 2</Panel.Body>
-      </Panel>
-
-      <Panel bsStyle="info">
-        <Panel.Heading>
-          <Panel.Title componentClass="h3">EXTRA 3</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>ADD TXT here for in the info of the extra 3</Panel.Body>
-      </Panel>
-
-      <Panel bsStyle="warning">
-        <Panel.Heading>
-          <Panel.Title componentClass="h3">EXTRA 4</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>ADD TXT here for in the info of the extra 4</Panel.Body>
-      </Panel>
-
-      <Panel bsStyle="danger">
-        <Panel.Heading>
-          <Panel.Title componentClass="h3">EXTRA 5</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>ADD TXT here for in the info of the extra 5</Panel.Body>
-      </Panel>
-    </div>)
+    const {name, gender, live, currlocation, age} = this.state;
+    return (<div style={{
+        width: '100%'
+      }}>
+      <h3>Summary Of You</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>{`Name`}</td>
+            <td>{`${name.value}`}</td>
+          </tr>
+          <tr>
+            <td>{`Gender`}
+            </td>
+            <td>{`${gender.value}`}</td>
+          </tr>
+          <tr>
+            <td>{`Lived`}</td>
+            <td>{`${live.value}`}</td>
+          </tr>
+          <tr>
+            <td>{`Current Location`}</td>
+            <td>{`${currlocation.value}`}</td>
+          </tr>
+          <tr>
+            <td>{`Age`}</td>
+            <td>{`${age.value}`}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>);
   }
 }
+
+Review.propTypes = {
+  steps: PropTypes.object
+};
+
+Review.defaultProps = {
+  steps: undefined
+};
+
+class SimpleForm extends Component {
+  render() {
+    return (<ChatBot className="outer" steps={[
+        {
+          id: '1',
+          message: 'What is your name?',
+          trigger: 'name'
+        }, {
+          id: 'name',
+          user: true,
+          trigger: '3'
+        }, {
+          id: '3',
+          message: 'Hi {previousValue}! What is your gender?',
+          trigger: 'gender'
+        }, {
+          id: 'gender',
+          options: [
+            {
+              value: ' male',
+              label: ' Male',
+              trigger: '4'
+            }, {
+              value: 'female',
+              label: 'Female',
+              trigger: '4'
+            }
+          ]
+        }, {
+          id: '4',
+          message: 'Where did you live?',
+          trigger: 'live'
+        }, {
+          id: 'live',
+          user: true,
+          trigger: '10'
+        }, {
+          id: '10',
+          message: 'Where do you live now?',
+          trigger: 'currlocation'
+        }, {
+          id: 'currlocation',
+          user: true,
+          trigger: '5'
+        }, {
+          id: '5',
+          message: 'How old are you?',
+          trigger: 'age'
+        }, {
+          id: 'age',
+          user: true,
+          trigger: '7',
+          validator: (value) => {
+            if (isNaN(value)) {
+              return 'value must be a number';
+            } else if (value < 0) {
+              return 'value must be positive';
+            } else if (value > 120) {
+              return `${value}? Come on!`;
+            }
+
+            return true;
+          }
+        }, {
+          id: '7',
+          message: 'Great! Check out your summary',
+          trigger: 'review'
+        }, {
+          id: 'review',
+          component: <Review/>,
+          asMessage: true,
+          trigger: 'update'
+        }, {
+          id: 'update',
+          message: 'Would you like to update some field?',
+          trigger: 'update-question'
+        }, {
+          id: 'update-question',
+          options: [
+            {
+              value: 'yes',
+              label: 'Yes',
+              trigger: 'update-yes'
+            }, {
+              value: 'no',
+              label: 'No',
+              trigger: 'end-message'
+            }
+          ]
+        }, {
+          id: 'update-yes',
+          message: 'What field would you like to update?',
+          trigger: 'update-fields'
+        }, {
+          id: 'update-fields',
+          options: [
+            {
+              value: 'name',
+              label: 'Name',
+              trigger: 'update-name'
+            }, {
+              value: 'gender',
+              label: 'Gender',
+              trigger: 'update-gender'
+            }, {
+              value: 'live',
+              label: 'Live',
+              trigger: 'update-live'
+            }, {
+              value: 'currlocation',
+              label: 'Currlocation',
+              trigger: 'update-currlocation'
+            }, {
+              value: 'age',
+              label: 'Age',
+              trigger: 'update-age'
+            }
+          ]
+        }, {
+          id: 'update-name',
+          update: 'name',
+          trigger: '7'
+        }, {
+          id: 'update-gender',
+          update: 'gender',
+          trigger: '7'
+        }, {
+          id: 'update-live',
+          update: 'live',
+          trigger: '7'
+        }, {
+          id: 'update-currlocation',
+          update: 'currlocation',
+          trigger: '7'
+        }, {
+          id: 'update-age',
+          update: 'age',
+          trigger: '7'
+        }, {
+          id: 'end-message',
+          message: 'Thanks! Your data was submitted successfully!',
+          end: true
+        }
+      ]}/>);
+  }
+}
+
+export default SimpleForm;

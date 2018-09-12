@@ -2,33 +2,27 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {Jumbotron, Grid, Col, Image, Button} from 'react-bootstrap';
 import './Home.css';
+import ChatBot from 'react-simple-chatbot';
 
-export default class About extends Component {
+export default class Home
+ extends Component {
   render() {
     return (<div>
-      <style>
-        {
-          'body { background-color: gold; }'
-        }</style>
+
       <Grid>
-        <Jumbotron>
-          <h2>Welcome Home</h2>
-          <p>here i can add text wht ever i want
-          </p>
+
+      <Jumbotron>
+      <h2>Welcome Back Paisano</h2>
+      <Image src="assets/welcomemex.jpg" className="about-profile-picmex" rounded="rounded"/>
+          <p><b> Helping Returnees And Deportees Start Over</b></p>
+          <p><b>Help us by answering some questions!</b></p>
           <Link to="/learnMore">
-            <Button bsStyle="primary">Learn More</Button>
+            <Button bsStyle="primary">Questionary</Button>
           </Link>
         </Jumbotron>
-        <Col xs={12} sm={4} smOffset={2}>
-          <h3>COMING HOME</h3>
-          <Image src="assets/mexlife.jpg" className="about-profile-pic" rounded="rounded"/>
-          <p>add wht ever text we want
-          </p>
-          <p>and moreeee</p>
-          <p>waitt just moreee textt</p>
-          <p>and last text lol
-          </p>
-        </Col>
+        <Image src="assets/amdream.jpg" className="about-profile-pic" rounded="rounded"/>
+        <Image src="assets/ice.jpg" className="about-profile-pic" rounded="rounded"/>
+        <Image src="assets/iceplane.jpg" className="about-profile-pic1" rounded="rounded"/>
       </Grid>
     </div>)
   }

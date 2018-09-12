@@ -32,8 +32,11 @@ class FooterPage extends React.Component {
                         <Col md="3" lg="4" xl="3" className="mb-4">
                             <h6 className="text-uppercase font-weight-bold"><strong>CODERS MOST WANTED</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p>Here we can add info about us as a group.</p>
+                            <p className="footerText">Our mission is handing you the correct tools to all recently returned and deported families.
+                               We will provide the resouces to start a brand new life in Mexico. We are a group of returnees
+                               and deportees just like you. We are here to help and support!</p>
                         </Col>
+
                         <Col md="2" lg="2" xl="2" className="mb-4">
                             <h6 className="text-uppercase font-weight-bold"><strong>Products We Used</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
@@ -42,21 +45,24 @@ class FooterPage extends React.Component {
                             <p><a href="https://mdbootstrap.com/react/">MDBReact</a></p>
                             <p><a href="https://react-bootstrap.github.io/">React-Bootstrap</a></p>
                         </Col>
+
                         <Col md="3" lg="2" xl="2" className="mb-4">
                             <h6 className="text-uppercase font-weight-bold"><strong>Useful links</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p><a href="link goes here">helpful link</a></p>
-                            <p><a href="link goes here">other link</a></p>
-                            <p><a href="link goes here">holacode</a></p>
-                            <p><a href="link goes here">Help</a></p>
+                            <p><a href=" http://www.holacode.com" target="_blank">Hola Code</a></p>
+                            <p><a href=" http://www.odamexico.org" target="_blank">ODA (Otros Dreams en Accion)</a></p>
+                            <p><a href="http://www.newcomienzos.org" target="_blank">Pocho House Services</a></p>
+                            <p><a href="http://www.segurodedesempleo.cdmx.gob.mx/requisitios_migrantes.php" target="_blank">Seguro de Desempleo</a></p>
+                            <p><a href="https://www.sederec.cdmx.gob.mx/secretaria/tramita-tu-tarjeta-sederec" target="_blank">SEDEREC(Obtain your ID)</a></p>
                         </Col>
+
                         <Col md="4" lg="3" xl="3" className="mb-4">
                             <h6 className="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p><i className="fa fa-home mr-3"></i> Mexico City, Mexico</p>
-                            <p><i className="fa fa-envelope mr-3"></i> CodersMostWanted@HC.com</p>
-                            <p><i className="fa fa-phone mr-3"></i> + 52 55 8686 3708</p>
-                            <p><i className="fa fa-print mr-3"></i> + 52 55 8675 7654</p>
+                            <p className="footerText">Mexico City, Mexico</p>
+                            <p className="footerText"> CodersMostWanted@HC.com</p>
+                            <p className="footerText"> + 52 55 8686 3708</p>
+                            <p className="footerText"> + 52 55 8675 7654</p>
                         </Col>
                     </Row>
                 </Container>

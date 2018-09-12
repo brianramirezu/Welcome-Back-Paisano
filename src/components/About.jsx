@@ -24,8 +24,8 @@ export default class Home extends Component {
           'body { background-color: lightblue; }'
         }</style>
       <Row className="show-grid text-center">
-        <h3>About Team</h3>
-        <Col sm={6} md={3} className="person-wrapper">
+        <h3>These Dreamers Were Deported to Mexico. Now, They're Helping Others Start Again!</h3>
+        <Col sm={12} md={6} className="person-wrapper">
           <AboutList teamMembers={this.state.list}/>
         </Col>
       </Row>

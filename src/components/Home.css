@@ -1,5 +1,5 @@
 .jumbotron {
-  margin-bottom: 4em;
+  margin-bottom: 10em;
 }
 .person-wrapper {
   margin-bottom: 2em;
@@ -14,18 +14,42 @@
   background-color: #2892D7;
 }
 
-h3 {
-  margin-bottom: 1em;
+h2 {
+
+  text-align: center;
 }
 .header-image {
   width: 100%;
   margin-top: -2em;
   margin-bottom: 2em;
 }
+.about-profile-pic2 {
+  float: right !important;
+  max-width: 1000px;
+   height: 200px;
+  margin: 0 1em 1em 0;
+  overflow: auto;
+}
 
 .about-profile-pic {
-  float: left;
+  float: right !important;
+  max-width: 1000px;
+   height: 200px;
   margin: 0 1em 1em 0;
+  overflow: auto;
+}
+.about-profile-pic1 {
+  float: left !important;
+  max-width: 1000px;
+   height: 200px;
+  margin: 0 1em 1em 0;
+  overflow: auto;
+}
+.about-profile-picmex {
+  display: block;
+     margin-left: auto;
+     margin-right: auto;
+
 }
 body {
   background-color: lightblue!important;

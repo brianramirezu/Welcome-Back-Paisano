@@ -4,8 +4,13 @@
   margin-bottom: 2em;
 }
 .header-image {
-  height: 250px;
-  width: 50%;
-  margin-top: -2em;
+  height: 200px;
+  width: 100%;
+  margin-top: 1em;
   margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rightsText{
+  color:black;
 }

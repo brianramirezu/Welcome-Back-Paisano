@@ -24,7 +24,7 @@ export default class Resources extends Component {
         }</style>
       <Grid>
         <Col xs={12} sm={4} smOffset={2}>
-          <Image src="assets/resources.jpg" className="about-profile-pic" rounded="rounded"/>
+          <Image src="assets/resources.jpg" className="about-profile-pic7" rounded="rounded"/>
           <Col xs={12} sm={7} className="sidebar-section">
             <ResourcesList resources={this.state.list}/>
           </Col>

@@ -1,12 +1,12 @@
 
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import './CustomNavbar.css'
+import './CustomNavbar.css';
 
 export default class CustomNavbar extends Component {
   render() {
-    return (<Navbar default="default" collapseOnSelect="collapseOnSelect">
+    return (<Navbar default="default" collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
           <Link to="/">CODERS MOST WANTED!!</Link>
@@ -14,7 +14,7 @@ export default class CustomNavbar extends Component {
         <Navbar.Toggle/>
       </Navbar.Header>
       <Navbar.Collapse>
-        <Nav pullRight="pullRight">
+        <Nav pullRight>
           <NavItem eventKey={1} componentClass={Link} href="/" to="/">
             Home
           </NavItem>

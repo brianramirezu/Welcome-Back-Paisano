@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
-import './LearnMore.css'
+import './LearnMore.css';
 
 class Review extends Component {
   constructor(props) {

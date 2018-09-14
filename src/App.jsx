@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import News from './components/News';
-import VidList from './components/vid-list.jsx';
+import vidComponent from './components/vidComponent.jsx';
 import Resources from './components/Resources';
 import LearnMore from './components/LearnMore';
 import Navbar from './components/CustomNavbar';
@@ -16,10 +16,10 @@ class App extends React.Component {
     return (<Router>
       <div>
         <Navbar/>
-        <Route exact="exact" path="/" component={Home}/>
-        <Route path="/about" component={About}/>                         
+        <Route exact path ="/" component={Home}/>
+        <Route path="/about" component={About}/>
         <Route path="/news" component={News}/>
-        <Route path="/vidlist" component={VidList}/>
+        <Route path="/vidlist" component={vidComponent}/>
         <Route path="/resources" component={Resources}/>
         <Route path="/learnMore" component={LearnMore}/>
         <Footer  />

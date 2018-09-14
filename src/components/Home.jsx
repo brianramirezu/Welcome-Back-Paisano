@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Jumbotron, Grid, Col, Image, Button} from 'react-bootstrap';
 import './Home.css';

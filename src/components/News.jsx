@@ -60,6 +60,6 @@ Confiscation of assets does not include the application of said assets to pay fo
           <iframe width="912" height="513" src="https://www.youtube.com/embed/0VkCUuwOSgQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </Row>
       </Grid>
-    </div>)
+    </div>);
   }
 }

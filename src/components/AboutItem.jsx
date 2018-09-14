@@ -1,6 +1,6 @@
 import React from "react";
 import {Grid, Row, Col, Image} from "react-bootstrap";
-import './About.css'
+import './About.css';
 
 const AboutItem = props => (<Grid>
   <Row>

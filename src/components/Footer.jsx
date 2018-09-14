@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row, Footer,Button,Fa } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
-import './Footer.css'
+import './Footer.css';
 
 
 class FooterPage extends React.Component {
